@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Accessibility — Home Lotts</title>
+<meta name="description" content="Home Lotts accessibility statement. Our target is WCAG 2.2 AA. Read about what we have done, what is known to be imperfect, and how to tell us about a barrier.">
+<meta name="theme-color" content="#0e6f5c">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/css/legal.css">
+</head>
+<body class="legal">
+
+<header class="doc-head">
+  <div class="wrap">
+    <div class="eyebrow">Legal</div>
+    <h1>Accessibility</h1>
+    <p>We want Home Lotts to be usable by everyone, including people who navigate by keyboard, use a screen reader, or cannot rely on colour alone. This page says what we have done and what is still imperfect.</p>
+    <div class="doc-meta"><span>Last reviewed: September 2026</span><span>Target: WCAG 2.2 level AA</span></div>
+  </div>
+</header>
+
+<div class="doc">
+  <div class="doc-layout">
+
+    <aside class="doc-toc">
+      <p>On this page</p>
+      <nav>
+        <a href="#commitment">Our commitment</a>
+        <a href="#done">What we have done</a>
+        <a href="#known">Known limitations</a>
+        <a href="#workarounds">Workarounds</a>
+        <a href="#browser">Browser and device support</a>
+        <a href="#report">Report a barrier</a>
+        <a href="#standards">Standards and enforcement</a>
+      </nav>
+    </aside>
+
+    <div class="doc-body">
+
+      <section id="commitment">
+        <h2>Our commitment</h2>
+        <p>Home Lotts targets the Web Content Accessibility Guidelines (WCAG) 2.2 at level AA. Accessibility is treated as a requirement here, not a stretch goal — a ticket tracker that only works for sighted mouse users is not much use to the people most likely to be keeping track of a dozen tickets.</p>
+        <p>This is a self-assessment. We have not carried out a full independent audit, and we do not claim a certification that nobody has issued.</p>
+      </section>
+
+      <section id="done">
+        <h2>What we have done</h2>
+
+        <h3>Keyboard</h3>
+        <ul>
+          <li>every interactive control — links, buttons, tabs, filter chips, switches, form fields and modals — is reachable and operable by keyboard, in a logical order;</li>
+          <li>a “Skip to content” link is the first focusable element, so you can bypass the navigation;</li>
+          <li>focus is visible on every control, using a high-contrast outline that does not depend on colour alone to be seen;</li>
+          <li><strong>Escape</strong> closes any open dialog or navigation drawer, and focus returns to the control that opened it.</li>
+        </ul>
+
+        <h3>Structure and assistive technology</h3>
+        <ul>
+          <li>one <code>h1</code> per page, with a logical heading hierarchy below it;</li>
+          <li>landmarks — <code>header</code>, <code>nav</code>, <code>main</code>, <code>footer</code> — labelled so they can be skipped by name;</li>
+          <li>each page has a distinct title that updates as you move between sections;</li>
+          <li>controls have accessible names, including icon-only buttons such as “Add ticket” and “Close dialog”;</li>
+          <li>status changes — a saved ticket, an exported file, a recorded prize — are announced in a live region rather than failing silently.</li>
+        </ul>
+
+        <h3>Colour and contrast</h3>
+        <ul>
+          <li>body text meets or exceeds a 4.5:1 contrast ratio against its background; large text meets 3:1;</li>
+          <li>status is never communicated by colour alone — “Winner”, “Results available” and “No prize” all carry text, and ticket status also has a text label beside the meter;</li>
+          <li>the digit-by-digit matching display pairs a filled style with a text summary such as “4 of 6 digits matched”, so the result is available without seeing the shading.</li>
+        </ul>
+
+        <h3>Motion, text and zoom</h3>
+        <ul>
+          <li>countdown tickers and transitions stop when <strong>Reduce motion</strong> is switched on in <a href="/index.html#/profile">Profile → Preferences</a>;</li>
+          <li>the operating system’s reduced-motion preference is respected automatically;</li>
+          <li>text reflows without horizontal scrolling at 200% zoom and at 320 CSS pixels wide;</li>
+          <li>layouts use relative units, so browser text-size settings are honoured.</li>
+        </ul>
+
+        <h3>Content</h3>
+        <ul>
+          <li>warnings and cautions are written as text, not conveyed by an icon alone;</li>
+          <li>data tables carry real headers;</li>
+          <li>documents on this site are written in plain English and structured with headings you can jump between.</li>
+        </ul>
+      </section>
+
+      <section id="known">
+        <h2>Known limitations</h2>
+        <p>We would rather list these than imply perfection:</p>
+        <ul>
+          <li><strong>Full independent audit not yet completed.</strong> The page above is a self-assessment against WCAG 2.2 AA, not a verified conformance claim.</li>
+          <li><strong>Countdown tickers update every second.</strong> For a user of assistive technology who is not on the page at that moment, this can generate repeated announcements. Reduce motion removes the ticker entirely.</li>
+          <li><strong>The application is client-side only.</strong> Because your data lives in browser storage, some browser privacy configurations — or clearing site data — will remove it. We provide CSV and JSON exports to mitigate this, but this is an inherent property of the design.</li>
+          <li><strong>Older browsers.</strong> Interface features such as <code>:has()</code> require a reasonably current browser. In an older browser, some form highlighting may not appear, though the app remains usable.</li>
+          <li><strong>Third-party destinations.</strong> Lotteries and retailers linked from our site are outside our control and are not covered by this statement.</li>
+        </ul>
+      </section>
+
+      <section id="workarounds">
+        <h2>Workarounds</h2>
+        <p>If something on this site is difficult to use, these usually help:</p>
+        <ul>
+          <li><strong>Reduce motion</strong> — switch off the countdowns in <a href="/index.html#/profile">Profile → Preferences</a>, or set reduced motion in your operating system.</li>
+          <li><strong>Zoom</strong> — every page is usable at 200% and above. If text is still too small, increase your browser’s base font size; the layout is built on relative units.</li>
+          <li><strong>Export your data</strong> — “Export CSV” in <a href="/index.html#/profile">Profile</a> gives you every ticket in a plain spreadsheet that any assistive technology can read, including screen readers and Braille displays.</li>
+          <li><strong>Tabular data</strong> — the printed version of a ticket page, via your browser’s print function, produces a simple text layout.</li>
+          <li><strong>Contact us</strong> — if none of that works, email us and we will help you get the information you need, in a format that suits you.</li>
+        </ul>
+      </section>
+
+      <section id="browser">
+        <h2>Browser and device support</h2>
+        <p>Tested and supported on current versions of Chrome, Edge, Firefox and Safari, on desktop and mobile. The app relies on modern CSS and JavaScript features, so very old browsers may render it imperfectly.</p>
+        <p>The app also works with JavaScript disabled for the legal and informational pages on this site — those are ordinary HTML pages. The ticket tracker itself obviously requires JavaScript, as it runs entirely in your browser.</p>
+      </section>
+
+      <section id="report">
+        <h2>Report a barrier</h2>
+        <p>If you hit a barrier — a control you cannot reach, a contrast problem, a screen reader that announces something confusing, or a page that simply does not work for you — please tell us.</p>
+        <p>Email <a href="mailto:access@thehomelott.com">access@thehomelott.com</a> with the page you were on and what happened, or use the <a href="/contact.html">contact page</a>. We aim to acknowledge accessibility reports within three business days and to give you a timeframe for any fix.</p>
+        <p>Details that genuinely help: the browser and assistive technology you are using, the page URL, and the specific control or text involved. “This does not work for me” is already useful — you do not need to diagnose it.</p>
+      </section>
+
+      <section id="standards">
+        <h2>Standards and enforcement</h2>
+        <p>The Australian government requires most services, including commercial ones, to meet the Web Content Accessibility Guidelines. This site is intended to meet WCAG 2.2 level AA.</p>
+        <p>If we do not resolve an accessibility problem, you can contact the Australian Communications and Media Authority, which handles accessibility complaints. We would much rather you told us first — see the <a href="/contact.html">contact page</a>.</p>
+      </section>
+
+      <div class="doc-pager">
+        <a href="/affiliate-disclosure.html"><span class="lbl">Previous</span><span class="ttl">Affiliate disclosure</span></a>
+        <a class="next" href="/play-responsibly.html"><span class="lbl">Next</span><span class="ttl">Play responsibly</span></a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer class="legal-foot">
+  <div class="wrap">
+    <p><strong>Home Lotts</strong> — independent Australian lottery tracking. Targets WCAG 2.2 AA. <a href="/about.html#demo">How we label data</a>.</p>
+    <nav>
+      <a href="/about.html">About</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+      <a href="/affiliate-disclosure.html">Affiliate disclosure</a>
+      <a href="/accessibility.html">Accessibility</a>
+      <a href="/play-responsibly.html">Play responsibly</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var links = [].slice.call(document.querySelectorAll('.doc-toc a'));
+  var map = {};
+  links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+  var sections = Object.keys(map).map(function (id) { return document.getElementById(id); }).filter(Boolean);
+  if (!sections.length || !('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (en.isIntersecting) { links.forEach(function (a) { a.classList.remove('active'); }); map[en.target.id].classList.add('active'); }
+    });
+  }, { rootMargin: '-10% 0px -70% 0px' });
+  sections.forEach(function (s) { io.observe(s); });
+})();
+</script>
+</body>
+</html>

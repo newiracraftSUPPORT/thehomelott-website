@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Home Lotts — Australian charity lottery ticket tracker</title>
+<meta name="description" content="Track every Australian charity lottery ticket in one place: draw dates, published results, prize tiers, and exactly how close each of your numbers was. Free, private, no account.">
+<meta name="theme-color" content="#0e6f5c">
+<meta name="color-scheme" content="light">
+<link rel="canonical" href="https://thehomelott.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Home Lotts">
+<meta property="og:title" content="Home Lotts — Australian charity lottery ticket tracker">
+<meta property="og:description" content="Track draw dates, results, prize tiers and how close your numbers were — in your own browser.">
+<meta property="og:url" content="https://thehomelott.com/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/assets/css/app.css">
+</head>
+<body>
+
+<a class="skip-link" href="#view">Skip to content</a>
+
+<div class="demo-strip">
+  <div class="wrap">
+    <span id="demo-strip-text">This build ships with a <strong>fictional demo catalogue</strong> — every lottery, draw and result is sample data. <a href="/about.html#demo">How we label data</a></span>
+    <button type="button" data-action="dismiss-banner">Hide</button>
+  </div>
+</div>
+
+<header class="topbar">
+  <div class="wrap">
+    <button class="icon-btn drawer-toggle" type="button" data-action="open-drawer" aria-label="Open menu" aria-controls="drawer">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16 M4 12h16 M4 17h16"/></svg>
+    </button>
+
+    <a class="brand" href="#/home" aria-label="Home Lotts home">
+      <span class="mark" aria-hidden="true">HL</span>
+      <span class="name" id="brand-name">Home Lotts</span>
+    </a>
+
+    <nav class="topnav" aria-label="Primary">
+      <a href="#/home" data-nav="home">Home</a>
+      <a href="#/tickets" data-nav="tickets">My tickets <span class="count" hidden></span></a>
+      <a href="#/results" data-nav="results">Results <span class="count" hidden></span></a>
+      <a href="#/draws" data-nav="draws">Draws</a>
+      <a href="#/lotteries" data-nav="lotteries">Lotteries</a>
+      <a href="#/profile" data-nav="profile">Profile</a>
+    </nav>
+
+    <div class="topbar-right">
+      <a class="icon-btn" href="#/tickets" aria-label="Add a ticket" data-action="add-ticket" title="Add a ticket">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14 M5 12h14"/></svg>
+      </a>
+      <a class="avatar" href="#/profile" id="avatar" aria-label="Your profile" title="Your profile">HL</a>
+    </div>
+  </div>
+</header>
+
+<div class="shell">
+  <aside class="rail">
+    <div class="rail-sticky">
+      <p class="rail-label">Track</p>
+      <nav aria-label="Sections">
+        <a href="#/home" data-nav="home">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.5 9.8V20.5h13V9.8M3.5 11.5 12 4.2l8.5 7.3"/></svg>
+          <span>Home</span>
+        </a>
+        <a href="#/tickets" data-nav="tickets">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 8.5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v1.6a2.2 2.2 0 0 0 0 4.4v1.5a2 2 0 0 1-2 2h-11a2 2 0 0 1-2-2v-1.5a2.2 2.2 0 0 0 0-4.4z M14.5 6.5v11"/></svg>
+          <span>My tickets</span><span class="count" hidden></span>
+        </a>
+        <a href="#/results" data-nav="results">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5a4.6 4.6 0 1 1 0 9.2 4.6 4.6 0 0 1 0-9.2z M8.8 12.2 7.3 20.5 12 17.6l4.7 2.9-1.5-8.3"/></svg>
+          <span>Results</span><span class="count" hidden></span>
+        </a>
+        <a href="#/draws" data-nav="draws">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6.5h16v14H4z M4 10.5h16 M8.5 4v4 M15.5 4v4"/></svg>
+          <span>Upcoming draws</span><span class="count" hidden></span>
+        </a>
+        <a href="#/lotteries" data-nav="lotteries">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4.5h6.5v6.5H4z M13.5 4.5H20v6.5h-6.5z M4 13.5h6.5V20H4z M13.5 13.5H20V20h-6.5z"/></svg>
+          <span>Lotteries</span><span class="count" hidden></span>
+        </a>
+        <a href="#/profile" data-nav="profile">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 11.5a3.8 3.8 0 1 0 0-7.6 3.8 3.8 0 0 0 0 7.6z M4.5 20.5c0-3.9 3.4-6 7.5-6s7.5 2.1 7.5 6"/></svg>
+          <span>Profile</span>
+        </a>
+      </nav>
+
+      <div class="rail-card" id="rail-next"></div>
+
+      <div class="rail-card">
+        <h4>How this works</h4>
+        <p style="margin-top:8px">Add the number printed on your ticket stub. Home Lotts watches the draw sheet, works out which prize tier your number falls into, and shows you how many digits you matched.</p>
+        <p style="margin-top:10px">Everything stays in this browser — no account, no tracking, no payment.</p>
+        <a class="btn btn--sm btn--ghost btn--block" href="/about.html" style="margin-top:12px">About Home Lotts</a>
+      </div>
+    </div>
+  </aside>
+
+  <main class="view" id="view" tabindex="-1"></main>
+</div>
+
+<nav class="mob-nav" id="mobile-nav" aria-label="Primary mobile"></nav>
+
+<div class="drawer-backdrop" id="drawer-backdrop" data-action="close-drawer"></div>
+<aside class="drawer" id="drawer" aria-label="Menu">
+  <div class="d-head">
+    <span class="brand"><span class="mark" aria-hidden="true">HL</span><span class="name">Home Lotts</span></span>
+    <button class="icon-btn" type="button" data-action="close-drawer" aria-label="Close menu">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12 M18 6 6 18"/></svg>
+    </button>
+  </div>
+  <nav id="drawer-nav"></nav>
+  <div class="d-foot">
+    <strong style="display:block;font-size:13px;color:var(--ink)">Australian lottery tracking</strong>
+    Draw dates, results and prize tiers — kept in your browser.
+    <div class="row tight" style="margin-top:12px">
+      <a class="btn btn--sm btn--ghost" href="/about.html">About</a>
+      <a class="btn btn--sm btn--ghost" href="/contact.html">Contact</a>
+    </div>
+  </div>
+</aside>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="f-top">
+      <div>
+        <span class="brand"><span class="mark" aria-hidden="true">HL</span><span class="name">Home Lotts</span></span>
+        <p style="margin-top:12px">An independent tracker for Australian charity and community lotteries. We help you keep track of your tickets — we do not sell them, and we never handle your money.</p>
+        <div class="row tight" style="margin-top:14px">
+          <a class="btn btn--sm btn--ghost" href="#/tickets">My tickets</a>
+          <a class="btn btn--sm btn--ghost" href="#/lotteries">Browse lotteries</a>
+        </div>
+      </div>
+      <div>
+        <h4>Track</h4>
+        <nav>
+          <a href="#/home">Home</a>
+          <a href="#/tickets">My tickets</a>
+          <a href="#/results">Results</a>
+          <a href="#/draws">Upcoming draws</a>
+          <a href="#/lotteries">Lottery catalogue</a>
+          <a href="#/profile">Profile &amp; settings</a>
+        </nav>
+      </div>
+      <div>
+        <h4>About</h4>
+        <nav>
+          <a href="/about.html">About us</a>
+          <a href="/affiliate-disclosure.html">Affiliate disclosure</a>
+          <a href="/accessibility.html">Accessibility</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/play-responsibly.html">Play responsibly</a>
+        </nav>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <nav>
+          <a href="/privacy.html">Privacy policy</a>
+          <a href="/terms.html">Terms of service</a>
+          <a href="/sitemap.xml">Sitemap</a>
+        </nav>
+        <p style="font-size:12.5px;margin-top:14px">Lottery tickets are games of chance. Play for fun, set a budget, and never chase a loss. If gambling is hurting you, call <a href="tel:1800858588" style="color:#fff;text-decoration:underline">1800 858 858</a>.</p>
+      </div>
+    </div>
+
+    <p class="disclaimer"><strong>Demo build notice.</strong> This site currently ships with a fictional demo catalogue. Every lottery, draw date, drawn number, prize pool and result shown here is sample data created to demonstrate the product — it is not a real draw sheet and it is not affiliated with, endorsed by, or connected to any real lottery organiser, charity or government body. Real results are labelled <strong>Verified</strong> only after being checked against a regulator-published draw sheet. “ENTER NEXT DRAW” links currently point to a placeholder destination and must be configured before launch.</p>
+
+    <div class="f-bottom">
+      <span>&copy; <span id="year">2026</span> Home Lotts. Made in Australia.</span>
+      <span>Ticket numbers, notes and settings are stored only in this browser.</span>
+    </div>
+  </div>
+</footer>
+
+<div id="modal-root"></div>
+<div class="toasts" id="toasts" aria-live="polite"></div>
+
+<script src="/assets/js/data.js"></script>
+<script src="/assets/js/store.js"></script>
+<script src="/assets/js/core.js"></script>
+<script src="/assets/js/view-home.js"></script>
+<script src="/assets/js/view-tickets.js"></script>
+<script src="/assets/js/view-results.js"></script>
+<script src="/assets/js/view-lotteries.js"></script>
+<script src="/assets/js/view-profile.js"></script>
+<script src="/assets/js/actions.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  if (!location.hash) location.hash = '#/home';
+</script>
+</body>
+</html>

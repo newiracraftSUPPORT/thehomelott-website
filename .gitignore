@@ -1,0 +1,27 @@
+# Nothing in this static site repo should ever be committed.
+# These rules exist to keep unrelated local projects and secrets out of a
+# repository that is published to the web.
+
+# unrelated local project (Room Specter API, contains .env)
+backend/
+
+# dead assets from the previous Posteazi site
+images/
+
+# logs and local scratch
+*.log
+build.log
+firebase-debug.log
+AGENTS.md
+
+# editor / OS noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# secrets
+.env
+.env.*
+*.pem
+*.key

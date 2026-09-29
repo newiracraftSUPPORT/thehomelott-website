@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Home Lotts — how we label data</title>
+<meta name="description" content="Who runs Home Lotts, how we source lottery results, and exactly how we separate fictional demo data from verified real results.">
+<meta name="theme-color" content="#0e6f5c">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/css/legal.css">
+</head>
+<body class="legal">
+
+<header class="doc-head">
+  <div class="wrap">
+    <div class="eyebrow">About</div>
+    <h1>About Home Lotts</h1>
+    <p>Home Lotts is an independent tracker for Australian charity and community lotteries. It exists to answer one question properly: which draw is next, what did it win, and did any of my numbers land?</p>
+    <div class="doc-meta"><span>Last updated: September 2026</span><span>Read time: 5 minutes</span></div>
+  </div>
+</header>
+
+<div class="doc">
+  <div class="doc-layout">
+
+    <aside class="doc-toc">
+      <p>On this page</p>
+      <nav>
+        <a href="#what">What we do</a>
+        <a href="#demo">How we label data</a>
+        <a href="#sources">Where results come from</a>
+        <a href="#matching">How matching works</a>
+        <a href="#affiliates">Affiliate links</a>
+        <a href="#limits">What we are not</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </aside>
+
+    <div class="doc-body">
+
+      <section id="what">
+        <h2>What we do</h2>
+        <p>Australian charities and community groups run lotteries constantly — for schools, hospitals, clubs, welfare agencies and local causes. Buying a ticket is easy. Remembering what you bought, when it draws, and what it won is not.</p>
+        <p>Home Lotts keeps that record for you. Add the six-digit number printed on your ticket stub, and the app tracks it from purchase through draw day, works out which prize tier your number falls into, and shows you a digit-by-digit comparison so you can see exactly how close you were.</p>
+        <p>We do not sell tickets, take payments, hold funds, or make prize claims. Those all stay with the organiser whose name is on the ticket.</p>
+      </section>
+
+      <section id="demo">
+        <h2>How we label data</h2>
+        <p>This matters more than anything else on this site, so we are explicit about it.</p>
+
+        <div class="doc-callout warn">
+          <h3>This build ships with a fictional demo catalogue</h3>
+          <p>Every lottery, draw date, drawn number, prize pool, winner count and result currently shown in the app is <strong>sample data created to demonstrate the product</strong>. It is not a real draw sheet. None of it comes from, or is connected to, any real lottery organiser, charity, gaming regulator or government body.</p>
+          <p>Entries you add yourself are yours. Demo entries are tagged <span class="badge badge--demo">DEMO</span> in every list, and you can remove all of them in one action from <a href="/index.html#/profile">Profile → Data &amp; privacy</a> without touching your own tickets.</p>
+        </div>
+
+        <p>As real data is introduced, each result carries one of these labels:</p>
+        <table>
+          <thead><tr><th>Label</th><th>What it means</th></tr></thead>
+          <tbody>
+            <tr><td><span class="badge badge--soft">Unverified</span></td><td>Entered from the organiser’s own announcement or social media. We have not yet compared it against an independent published draw sheet. Treat prize amounts as provisional.</td></tr>
+            <tr><td><span class="badge badge--verified">Verified</span></td><td>Checked line by line against a regulator-published draw sheet or a source we can attribute. This is the only label we would rely on to settle a prize dispute.</td></tr>
+            <tr><td><span class="badge badge--demo">Demo</span></td><td>Fictional sample data. Not a real draw. Never treated as a result.</td></tr>
+          </tbody>
+        </table>
+
+        <p>Where we have made an error, we correct the record and note the change rather than quietly overwriting it. Draw sheets are the organiser’s official record; if you believe one of our results is wrong, please <a href="/contact.html">tell us</a> and we will check it against the source.</p>
+      </section>
+
+      <section id="sources">
+        <h2>Where results come from</h2>
+        <p>We work in this order, and we stop at the first source that holds up:</p>
+        <ol>
+          <li><strong>Regulator-published draw sheets</strong> — the official record, where the relevant state or territory gaming regulator publishes one.</li>
+          <li><strong>The organiser’s own published results page</strong> — usually the same data the regulator holds, presented for participants.</li>
+          <li><strong>The organiser’s dated announcement</strong> — social media, newsletter or notice, treated as unverified until it can be compared to a draw sheet.</li>
+          <li><strong>Participant reports</strong> — what people tell us. Useful for spotting problems, never treated as a source on their own.</li>
+        </ol>
+        <p>Where two sources disagree, the higher tier wins. We hold the disagreement open and say so rather than publishing a single confident number.</p>
+      </section>
+
+      <section id="matching">
+        <h2>How matching works</h2>
+        <p>Most of these lotteries draw six digits, and most award prizes on matching digits from either end of your number. Home Lotts scores your ticket the same way:</p>
+        <ul>
+          <li>Count the digits that match from the <strong>left</strong> of your number against the left of each drawn number.</li>
+          <li>Count the digits that match from the <strong>right</strong>.</li>
+          <li>Your score is the better of those two runs, against the closest drawn number.</li>
+          <li>Your score maps to the organiser’s published prize tiers — a six-digit match, five, four, and so on.</li>
+        </ul>
+        <p>So the digit display in the app is literal: each lit digit is a digit that matched, in order, from the same end. Two numbers can score three digits in different ways, and the app tells you which end matched.</p>
+        <p>Two honest limitations. We can only match tickets whose draw sheet we hold, and a real-world claim is always settled by the organiser — not by us. If we score a ticket as a winner, that is a strong signal to check your stub, not a substitute for checking it.</p>
+      </section>
+
+      <section id="affiliates">
+        <h2>Affiliate links</h2>
+        <p>Buttons marked <strong>ENTER NEXT DRAW</strong> take you to the organiser’s site, or to a configured partner link. We are transparent about this because a tracking service that hides its commercial relationships is not a service you can trust with your ticket numbers.</p>
+        <ul>
+          <li>We may earn a referral commission when you buy a ticket through one of those links. It costs you nothing extra.</li>
+          <li>We never take a share of prize money, and we have no influence over draw dates, results or prize allocation.</li>
+          <li>We do not see your ticket details, your payment details, or anything you buy.</li>
+          <li>Every outbound link carries <code>rel="sponsored nofollow"</code>.</li>
+        </ul>
+        <p>Full detail is in the <a href="/affiliate-disclosure.html">affiliate disclosure</a>. You can turn our configured links off entirely in <a href="/index.html#/profile">Profile → Affiliate links</a>, which sends every button straight to the organiser.</p>
+      </section>
+
+      <section id="limits">
+        <h2>What we are not</h2>
+        <p>We are not a lottery operator, a gaming authority, a financial product, or a substitute for your own records. Specifically:</p>
+        <ul>
+          <li>We do not sell lottery tickets, take payment, or hold money on anyone’s behalf.</li>
+          <li>We do not make prize claims, and we cannot pay or guarantee a prize.</li>
+          <li>We do not give legal, financial or tax advice.</li>
+          <li>We do not collect your ticket numbers, your name or your email address. Your data stays in your browser.</li>
+        </ul>
+        <p>Lottery tickets are a form of gambling. There is no strategy that makes the odds better, and past draws tell you nothing about future ones. If gambling is causing you harm, free and confidential help is available — see our <a href="/play-responsibly.html">play responsibly</a> page.</p>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Found a wrong result, a broken link, or something we have got wrong about a lottery? We want to hear about it.</p>
+        <p>Email <a href="mailto:hello@thehomelott.com">hello@thehomelott.com</a>, or use the form on the <a href="/contact.html">contact page</a>. For a result we have published incorrectly, include the lottery name, the draw date, and what our page showed — that is enough for us to check it against the source.</p>
+      </section>
+
+      <div class="doc-pager">
+        <a href="/privacy.html"><span class="lbl">Next</span><span class="ttl">Privacy policy</span></a>
+        <a class="next" href="/index.html#/lotteries"><span class="lbl">Back to the app</span><span class="ttl">Browse lotteries</span></a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer class="legal-foot">
+  <div class="wrap">
+    <p><strong>Home Lotts</strong> is an independent Australian lottery tracking service. Not affiliated with any lottery organiser or government body. Fictional demo data — see <a href="/about.html#demo">how we label data</a>.</p>
+    <nav>
+      <a href="/about.html">About</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+      <a href="/affiliate-disclosure.html">Affiliate disclosure</a>
+      <a href="/accessibility.html">Accessibility</a>
+      <a href="/play-responsibly.html">Play responsibly</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+// highlight the current section in the table of contents
+(function () {
+  var links = [].slice.call(document.querySelectorAll('.doc-toc a'));
+  var map = {};
+  links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+  var sections = Object.keys(map).map(function (id) { return document.getElementById(id); }).filter(Boolean);
+  if (!sections.length || !('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (en.isIntersecting) {
+        links.forEach(function (a) { a.classList.remove('active'); });
+        map[en.target.id].classList.add('active');
+      }
+    });
+  }, { rootMargin: '-10% 0px -70% 0px' });
+  sections.forEach(function (s) { io.observe(s); });
+})();
+</script>
+</body>
+</html>
